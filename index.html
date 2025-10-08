@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      ZainGymTech — Premier Gym Design Experts for Fitness Spaces | Modern
+      Wellness & Gym Interiors
+    </title>
+    <meta
+      name="description"
+      content="ZainGymTech specializes in innovative gym design and fitness space architecture. From conceptual execution to 3D visualizations, we create inspirational wellness environments for hospitality, corporate, and residential projects. Schedule a consultation today."
+    />
+    <meta
+      name="keywords"
+      content="gym design, fitness space architecture, wellness interiors, 3D gym visualization, corporate wellness design, residential gym, gym project management"
+    />
+    <meta name="author" content="ZainGymTech" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="ZainGymTech — Design Experts for Fitness Spaces"
+    />
+    <meta
+      property="og:description"
+      content="Transforming fitness spaces with cutting-edge design, technology, and operational excellence."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zaingymtech.com" />
+    <meta property="og:image" content="gym-design.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      .fade {
+        transition: opacity 0.8s ease-in-out;
+      }
+
+      .animate-marquee {
+        animation: marquee 30s linear infinite;
+        display: flex;
+      }
+      /* Glass */
+      .glass-hero {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      }
+      .glass-mobile-menu {
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .hero-video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .safe-top {
+        padding-top: max(1rem, env(safe-area-inset-top));
+      }
+
+      /* Card Styles for Work */
+      .work-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .work-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(6, 78, 59, 0.1),
+          rgba(34, 197, 94, 0.05)
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+      }
+
+      .work-card:hover::before {
+        opacity: 1;
+      }
+
+      .work-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .work-card img {
+        transition: transform 0.5s ease;
+      }
+
+      .work-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .btn-hover {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-hover::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.6s ease, height 0.6s ease;
+      }
+
+      .btn-hover:hover::after {
+        width: 300px;
+        height: 300px;
+      }
+
+      /* Enhanced Modern UI/UX */
+      .modern-section {
+        background: linear-gradient(
+          135deg,
+          #000000 0%,
+          #0f0f0f 50%,
+          #1a1a1a 100%
+        );
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .glass-overlay {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Footer Styles */
+      .footer {
+        background: rgba(0, 0, 0, 0.8);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #10b981;
+      }
+    </style>
+  </head>
+  <body class="min-h-full bg-black text-white antialiased">
+    <section
+      class="hero relative min-h-[70vh] md:min-h-screen overflow-hidden pt-28"
+    >
+      <div class="absolute inset-0 -z-10">
+        <video
+          class="hero-video"
+          aria-hidden="true"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="hero-fallback.jpg"
+        >
+          <source src="hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-black/35 via-emerald-900/20 to-teal-900/25"
+        ></div>
+      </div>
+
+      <header class="fixed top-0 inset-x-0 z-[200] safe-top">
+        <nav
+          class="glass-hero md:mx-auto mx-2 max-w-5xl rounded-full px-4 md:px-6 lg:px-8 py-3 transition-all"
+        >
+          <div class="flex items-center justify-between">
+            <a
+              href="/index.html"
+              class="flex items-center gap-2 font-semibold text-white hover:text-emerald-300 transition-colors"
+              aria-label="ZainGymTech Homepage"
+            >
+              <span class="text-xl tracking-tight"
+                >ZainGymTech<span class="text-emerald-400">.</span></span
+              >
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-6 lg:gap-8">
+              <ul class="hidden md:flex gap-6 lg:gap-8 text-sm text-white">
+                <li>
+                  <a
+                    class="hover:text-emerald-300 transition-colors"
+                    href="/index.html"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-emerald-300 transition-colors"
+                    href="/about.html"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-emerald-300 transition-colors"
+                    href="/contact.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+              <a
+                href="/index.html#contact"
+                class="btn-hover hidden md:inline-block rounded-full bg-emerald-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:shadow-lg transition-shadow"
+                >LET'S TALK</a
+              >
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button
+              id="hamburger"
+              class="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 relative z-20"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span class="sr-only">Menu</span>
+              <!-- Hamburger icon -->
+              <svg
+                id="icon-menu"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                class="w-6 h-6 text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
+                />
+              </svg>
+              <!-- Close (X) icon — hidden by default -->
+              <svg
+                id="icon-close"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                class="w-6 h-6 text-white hidden"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            id="mobile-menu"
+            class="hidden md:hidden absolute left-0 right-0 mt-4"
+          >
+            <div class="glass-mobile-menu mx-4 rounded-2xl p-4">
+              <ul class="flex flex-col gap-2 text-sm text-white">
+                <li>
+                  <a
+                    class="block rounded-lg px-3 py-2 hover:bg-white/10 transition-colors"
+                    href="/index.html"
+                    data-close
+                    >Home</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    class="block rounded-lg px-3 py-2 hover:bg-white/10 transition-colors"
+                    href="/about.html"
+                    data-close
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block rounded-lg px-3 py-2 hover:bg-white/10 transition-colors"
+                    href="/contact.html"
+                    data-close
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+              <a
+                href="/index.html#contact"
+                class="mt-3 block w-full text-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-medium text-white shadow-sm hover:shadow-lg transition-shadow btn-hover"
+                data-close
+                >LET'S TALK</a
+              >
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <main class="relative bg-black">
+      <section
+        id="home"
+        class="w-full flex flex-col items-center mx-auto max-w-7xl text-center px-4 md:px-20 py-12 md:py-20 space-y-16 relative modern-section fade-in"
+      >
+        <h1
+          class="md:max-w-2xl text-3xl md:text-5xl font-bold uppercase text-white leading-tight"
+        >
+          WE ARE DESIGN EXPERTS FOR
+          <span class="text-emerald-500">FITNESS SPACES</span>
+        </h1>
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+          Discover innovative gym design solutions that integrate the latest
+          exercise trends, technology, and user-centric architecture to create
+          inspiring wellness environments.
+        </p>
+
+        <div
+          class="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto fade-in"
+        >
+          <div class="w-full md:w-[60%]">
+            <img
+              src="gym-design.png"
+              alt="Professional 3D render of a modern gym interior with state-of-the-art fitness equipment and ergonomic design"
+              class="w-full h-auto rounded-md shadow-lg object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="w-full md:w-[40%] md:pl-12 mt-8 md:mt-0 text-left">
+            <p class="text-white mt-4 leading-relaxed text-lg">
+              We balance exercise trends and technology in the development of
+              inspirational gym design. Our expertise is rooted in conceptual
+              execution, project management, and procurement for wellness spaces
+              in hospitality, private clubs, residential developments, student
+              recreation, and corporate wellness.
+            </p>
+
+            <button
+              class="mt-8 rounded-full bg-emerald-500 px-8 py-3 text-sm font-medium text-white shadow-sm hover:shadow-lg transition-shadow btn-hover"
+              aria-label="Schedule a free consultation for gym design"
+            >
+              Schedule a Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-emerald-500 py-4">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2 class="sr-only">Trusted Clients</h2>
+          <div class="relative">
+            <div class="grid grid-cols-5 gap-20">
+              <img
+                src="nestle-logo.png"
+                alt="Nestle - Leading global food and beverage company"
+                class="size-16 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+              <img
+                src="coke-logo.png"
+                alt="Coca-Cola - Iconic beverage brand"
+                class="size-16 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+              <img
+                src="allied-logo.png"
+                alt="Allied - Corporate wellness partner"
+                class="size-16 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+              <img
+                src="sukh-chan.png"
+                alt="Sukh Chan - Hospitality fitness solutions"
+                class="size-16 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+              <img
+                src="royal-palm.png"
+                alt="Royal Palm - Luxury residential developer"
+                class="size-16 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Original How We Serve Section as Services -->
+      <section
+        id="services"
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between px-6 md:px-12 py-16 space-y-8 md:space-y-0 md:space-x-10 fade-in"
+      >
+        <!-- LEFT SIDE TEXTS -->
+        <div class="w-full md:w-1/2 space-y-6">
+          <h2 class="text-4xl font-bold uppercase text-white mb-6">
+            How We <span class="text-emerald-500">Serve</span>:
+          </h2>
+
+          <!-- Text Item 1 -->
+          <div
+            class="p-6 border-l-4 cursor-pointer transition-all duration-300 border-transparent hover:border-emerald-500 text-white"
+            id="tab1"
+            onclick="showSlide(0)"
+          >
+            <h3 class="font-bold text-white uppercase">Design</h3>
+            <p class="text-gray-300 mt-2 leading-relaxed">
+              Modern exercise modalities demand space for movement and
+              versatility in floor planning to achieve functional balance and
+              user engagement. Safety, utility, and experience are the
+              fundamental pillars of our approach.
+            </p>
+          </div>
+
+          <!-- Text Item 2 -->
+          <div
+            class="p-6 border-l-4 border-transparent hover:border-emerald-500 cursor-pointer transition-all duration-300 text-white"
+            id="tab2"
+            onclick="showSlide(1)"
+          >
+            <h3 class="font-bold text-white uppercase">
+              Optimize for Operation
+            </h3>
+            <p class="text-gray-300 mt-2 leading-relaxed">
+              FDG provides unique perspective through our expertise in project
+              feasibility, demographic alignment, and operational
+              considerations. We ensure your project will be delivered on-time
+              and within budget.
+            </p>
+          </div>
+
+          <!-- Text Item 3 -->
+          <div
+            class="p-6 border-l-4 border-transparent hover:border-emerald-500 cursor-pointer transition-all duration-300 text-white"
+            id="tab3"
+            onclick="showSlide(2)"
+          >
+            <h3 class="font-bold text-white uppercase">
+              Visualization to Origination
+            </h3>
+            <p class="text-gray-300 mt-2 leading-relaxed">
+              Our designers bring to life the ideology and passion behind every
+              space we design. 3D Visualizations enhance design review and help
+              market new facilities or renovations.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE IMAGES -->
+        <div class="w-full md:w-1/2 relative">
+          <div
+            class="overflow-hidden rounded-xl shadow-xl h-[450px] md:h-[580px] relative"
+          >
+            <img
+              src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              class="w-full h-full object-cover absolute inset-0 fade slide opacity-100"
+              alt="Gym Design Visualization 1"
+              loading="lazy"
+            />
+            <img
+              src="https://images.pexels.com/photos/1552104/pexels-photo-1552104.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              class="w-full h-full object-cover absolute inset-0 fade slide opacity-0"
+              alt="Gym Design Visualization 2"
+              loading="lazy"
+            />
+            <img
+              src="https://images.pexels.com/photos/3076511/pexels-photo-3076511.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              class="w-full h-full object-cover absolute inset-0 fade slide opacity-0"
+              alt="Gym Design Visualization 3"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Commercial Gym Design Section -->
+      <section
+        id="commercial"
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 bg-gray-900/20 modern-section"
+      >
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold uppercase text-white mb-6">
+            <span class="text-emerald-500">Commercial</span> Gym Design
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            Tailored solutions for high-traffic commercial spaces like corporate
+            wellness centers, hospitality gyms, and public fitness facilities,
+            focusing on scalability, durability, and user flow.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="glass-overlay rounded-2xl p-8 fade-in">
+            <img
+              src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Commercial gym interior design example"
+              class="w-full h-64 object-cover rounded-lg mb-6"
+              loading="lazy"
+            />
+            <h3 class="font-bold text-xl uppercase text-white mb-2">
+              Corporate & Hospitality
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Efficient designs for busy environments, integrating smart tech
+              for seamless operations.
+            </p>
+          </div>
+          <div class="glass-overlay rounded-2xl p-8 fade-in">
+            <img
+              src="https://images.pexels.com/photos/1552104/pexels-photo-1552104.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Public fitness facility commercial design"
+              class="w-full h-64 object-cover rounded-lg mb-6"
+              loading="lazy"
+            />
+            <h3 class="font-bold text-xl uppercase text-white mb-2">
+              Public & Club Facilities
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Versatile layouts that maximize space and engagement for diverse
+              user groups.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Residential Gym Design Section -->
+      <section
+        id="residential"
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 modern-section"
+      >
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold uppercase text-white mb-6">
+            <span class="text-emerald-500">Residential</span> Gym Design
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            Personalized home gym solutions that blend luxury, functionality,
+            and aesthetics, perfect for private residences and luxury
+            developments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="glass-overlay rounded-2xl p-8 fade-in">
+            <img
+              src="https://images.pexels.com/photos/3076511/pexels-photo-3076511.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Luxury residential home gym design"
+              class="w-full h-64 object-cover rounded-lg mb-6"
+              loading="lazy"
+            />
+            <h3 class="font-bold text-xl uppercase text-white mb-2">
+              Home & Private Gyms
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Compact yet sophisticated designs customized to your lifestyle and
+              space constraints.
+            </p>
+          </div>
+          <div class="glass-overlay rounded-2xl p-8 fade-in">
+            <img
+              src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="High-end residential community gym pavilion"
+              class="w-full h-64 object-cover rounded-lg mb-6"
+              loading="lazy"
+            />
+            <h3 class="font-bold text-xl uppercase text-white mb-2">
+              Community & Estate Gyms
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Elegant facilities that enhance property value and resident
+              wellness.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Work Section with Modern Cards -->
+      <section
+        id="projects"
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 bg-gray-900/20 modern-section"
+      >
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold uppercase text-white mb-6">
+            Our <span class="text-emerald-500">Work</span>
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            Explore our portfolio of transformative fitness space designs that
+            blend functionality, aesthetics, and innovation. Each project
+            showcases our commitment to creating dynamic gym environments
+            tailored to diverse needs.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Work Card 1 -->
+          <article
+            class="work-card rounded-2xl overflow-hidden shadow-xl glass-overlay fade-in"
+          >
+            <img
+              src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Elite Fitness Hub: State-of-the-art urban gym with integrated tech"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl uppercase text-white mb-2">
+                Elite Fitness Hub
+              </h3>
+              <p class="text-gray-300 text-sm mb-4">
+                A state-of-the-art gym for urban professionals featuring dynamic
+                layouts and tech integration.
+              </p>
+              <button
+                class="rounded-full bg-emerald-500 px-6 py-2 text-sm font-medium text-white shadow-sm hover:shadow-lg transition-shadow btn-hover"
+              >
+                View Project
+              </button>
+            </div>
+          </article>
+
+          <!-- Work Card 2 -->
+          <article
+            class="work-card rounded-2xl overflow-hidden shadow-xl glass-overlay fade-in"
+          >
+            <img
+              src="https://images.pexels.com/photos/1552104/pexels-photo-1552104.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Wellness Retreat Center: Luxury resort fitness integration"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl uppercase text-white mb-2">
+                Wellness Retreat Center
+              </h3>
+              <p class="text-gray-300 text-sm mb-4">
+                Integrated wellness spaces in a luxury resort, emphasizing
+                serenity and functional flow.
+              </p>
+              <button
+                class="rounded-full bg-emerald-500 px-6 py-2 text-sm font-medium text-white shadow-sm hover:shadow-lg transition-shadow btn-hover"
+              >
+                View Project
+              </button>
+            </div>
+          </article>
+
+          <!-- Work Card 3 -->
+          <article
+            class="work-card rounded-2xl overflow-hidden shadow-xl glass-overlay fade-in"
+          >
+            <img
+              src="https://images.pexels.com/photos/3076511/pexels-photo-3076511.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Corporate Wellness Lounge: Efficient office gym design"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl uppercase text-white mb-2">
+                Corporate Wellness Lounge
+              </h3>
+              <p class="text-gray-300 text-sm mb-4">
+                Dynamic fitness area for corporate employees, optimized for
+                quick and effective sessions.
+              </p>
+              <button
+                class="rounded-full bg-emerald-500 px-6 py-2 text-sm font-medium text-white shadow-sm hover:shadow-lg transition-shadow btn-hover"
+              >
+                View Project
+              </button>
+            </div>
+          </article>
+
+          <!-- Additional Work Card 4 for Balance -->
+          <article
+            class="work-card rounded-2xl overflow-hidden shadow-xl glass-overlay lg:col-span-2 md:col-span-2 fade-in"
+          >
+            <img
+              src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Residential Fitness Pavilion: High-end community gym architecture"
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl uppercase text-white mb-2">
+                Residential Fitness Pavilion
+              </h3>
+              <p class="text-gray-300 text-sm mb-4">
+                Premium gym design for high-end residential community, blending
+                luxury with everyday usability.
+              </p>
+              <button
+                class="rounded-full bg-emerald-500 px-6 py-2 text-sm font-medium text-white shadow-sm hover:shadow-lg transition-shadow btn-hover"
+              >
+                View Project
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Testimonials Section (Placeholder for Modern UI) -->
+      <section
+        id="testimonials"
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 modern-section"
+      >
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold uppercase text-white mb-6">
+            <span class="text-emerald-500">Testimonials</span>
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            Hear from our satisfied clients about transforming their fitness
+            visions into reality with ZainGymTech's expert gym design services.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="glass-overlay rounded-2xl p-8 fade-in">
+            <blockquote class="text-gray-300 italic mb-4">
+              "ZainGymTech elevated our corporate wellness space beyond
+              expectations—seamless and inspiring!"
+            </blockquote>
+            <div class="flex items-center">
+              <img
+                src="https://fitnessdesigngroup.b-cdn.net/wordpress/wp-content/uploads/2024/01/Greg_Commins_v4b.jpg"
+                alt="Jane Doe profile photo"
+                class="w-12 h-12 rounded-full mr-4"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="font-semibold text-white">Jane Doe</h4>
+                <p class="text-gray-400 text-sm">CEO, TechCorp</p>
+              </div>
+            </div>
+          </article>
+          <article class="glass-overlay rounded-2xl p-8 fade-in">
+            <blockquote class="text-gray-300 italic mb-4">
+              "The design expertise and attention to detail made our gym a
+              standout in the community."
+            </blockquote>
+            <div class="flex items-center">
+              <img
+                src="https://fitnessdesigngroup.b-cdn.net/wordpress/wp-content/uploads/2021/07/bryan-green_2021.jpg"
+                alt="John Smith profile photo"
+                class="w-12 h-12 rounded-full mr-4"
+                loading="lazy"
+              />
+              <div>
+                <h4 class="font-semibold text-white">John Smith</h4>
+                <p class="text-gray-400 text-sm">Owner, Elite Fitness</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section (Placeholder for Modern UI) -->
+      <section
+        id="contact"
+        class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 modern-section"
+      >
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold uppercase text-white mb-6">
+            Ready to <span class="text-emerald-500">Transform</span> Your Space?
+          </h2>
+          <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+            Let's discuss your vision and bring it to life with cutting-edge gym
+            design and fitness architecture. Contact our experts today.
+          </p>
+        </div>
+        <div
+          class="glass-overlay rounded-2xl p-8 md:p-12 max-w-2xl mx-auto fade-in"
+        >
+          <form class="space-y-6" action="#" method="POST">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="w-full p-4 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white focus:border-emerald-500 focus:outline-none transition-colors"
+              aria-label="Your Name"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="w-full p-4 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white focus:border-emerald-500 focus:outline-none transition-colors"
+              aria-label="Your Email"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+              class="w-full p-4 rounded-lg bg-gray-800/50 border border-gray-600/50 text-white focus:border-emerald-500 focus:outline-none transition-colors"
+              aria-label="Your Message"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full rounded-full bg-emerald-500 px-8 py-4 text-sm font-medium text-white shadow-sm hover:shadow-lg transition-shadow btn-hover"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-12 px-6 md:px-12">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">ZainGymTech</h3>
+          <p class="text-gray-400 text-sm">
+            Design experts for fitness spaces. Creating inspirational wellness
+            environments worldwide.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#services">Gym Design</a></li>
+            <li><a href="#services">Operational Optimization</a></li>
+            <li><a href="#services">3D Visualization</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Specializations</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#commercial">Commercial Gyms</a></li>
+            <li><a href="#residential">Residential Gyms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li>Email: info@zaingymtech.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: 123 Fitness Ave, Wellness City, WC 12345</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm"
+      >
+        <p>
+          &copy; 2025 ZainGymTech. All rights reserved. |
+          <a href="/privacy">Privacy Policy</a> |
+          <a href="/terms">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Script
+      (function () {
+        const btn = document.getElementById("hamburger");
+        const menu = document.getElementById("mobile-menu");
+        const iconMenu = document.getElementById("icon-menu");
+        const iconClose = document.getElementById("icon-close");
+        const closeSelectors = "[data-close]";
+        let isOpen = false;
+
+        function openMenu() {
+          isOpen = true;
+          menu.classList.remove("hidden");
+          btn.setAttribute("aria-expanded", "true");
+          document.documentElement.classList.add("overflow-hidden");
+          document.body.classList.add("overflow-hidden");
+          iconMenu.classList.add("hidden");
+          iconClose.classList.remove("hidden");
+        }
+
+        function closeMenu() {
+          isOpen = false;
+          menu.classList.add("hidden");
+          btn.setAttribute("aria-expanded", "false");
+          document.documentElement.classList.remove("overflow-hidden");
+          document.body.classList.remove("overflow-hidden");
+          iconClose.classList.add("hidden");
+          iconMenu.classList.remove("hidden");
+        }
+
+        btn.addEventListener("click", () =>
+          isOpen ? closeMenu() : openMenu()
+        );
+        menu.addEventListener("click", (e) => {
+          if (e.target.closest(closeSelectors)) closeMenu();
+        });
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && isOpen) closeMenu();
+        });
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 768) closeMenu();
+        });
+      })();
+
+      // Services Slide Show Script
+      const slides = document.querySelectorAll(".slide");
+      const tabs = document.querySelectorAll("[id^='tab']");
+      const h3s = document.querySelectorAll("h3");
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((s, i) => {
+          s.style.opacity = i === index ? "1" : "0";
+        });
+        tabs.forEach((tab, i) => {
+          tab.classList.toggle("border-emerald-500", i === index);
+          tab.classList.toggle("bg-emerald-900", i === index);
+        });
+        h3s.forEach((h3, i) => {
+          h3.classList.toggle("text-emerald-400", i === index);
+        });
+        current = index;
+      }
+
+      // Initialize with first slide
+      showSlide(0);
+
+      // Micro Interactions with GSAP
+      gsap.registerPlugin();
+
+      // Button hovers
+      document.querySelectorAll(".btn-hover").forEach((btn) => {
+        btn.addEventListener("mouseenter", () => {
+          gsap.to(btn, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+        });
+        btn.addEventListener("mouseleave", () => {
+          gsap.to(btn, { scale: 1, duration: 0.3, ease: "power2.out" });
+        });
+      });
+
+      // Work Card hovers
+      document.querySelectorAll(".work-card").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          gsap.to(card.querySelector("img"), {
+            scale: 1.05,
+            duration: 0.5,
+            ease: "power2.out",
+          });
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card.querySelector("img"), {
+            scale: 1,
+            duration: 0.5,
+            ease: "power2.out",
+          });
+        });
+      });
+
+      // Nav link hovers
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          gsap.to(link, { y: -2, duration: 0.3, ease: "power2.out" });
+        });
+        link.addEventListener("mouseleave", () => {
+          gsap.to(link, { y: 0, duration: 0.3, ease: "power2.out" });
+        });
+      });
+
+      // Tab hovers for Services
+      document.querySelectorAll('[id^="tab"]').forEach((tab) => {
+        tab.addEventListener("mouseenter", () => {
+          gsap.to(tab, { x: 5, duration: 0.3, ease: "power2.out" });
+        });
+        tab.addEventListener("mouseleave", () => {
+          gsap.to(tab, { x: 0, duration: 0.3, ease: "power2.out" });
+        });
+      });
+
+      // Fade-in animations on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
